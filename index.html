@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="ani"></div>
+        <div class="container">
+            <div class="clock">
+          <span id="hrs">00</span>
+          <span>:</span>
+          <span id="min">00</span>
+          <span>:</span>
+          <span id="sec">00</span>
+        
+             
+            </div>
+        </div>
+    </div>
+
+<script>
+
+let hrs=document.getElementById('hrs')
+let min=document.getElementById('min')
+let sec=document.getElementById('sec')
+
+ const updatetimer=()=>{
+
+let hour=String(new Date().getHours()).padStart(2,'0')    // 2 is the length start with zero
+let minu=String(new Date().getMinutes()).padStart(2,'0')    // 2 is the length start with zero
+let second=String(new Date().getSeconds()).padStart(2,'0')    // 2 is the length start with zero
+    
+hrs.innerText=hour
+min.innerText=minu 
+sec.innerText=second
+
+
+ }
+setInterval(updatetimer,1000)
+
+
+</script>
+
+</body>
+</html>
